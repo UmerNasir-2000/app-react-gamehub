@@ -1,11 +1,12 @@
-import { Button } from "@chakra-ui/react"
-
+import { Button } from "@chakra-ui/react";
+import LayoutProvider from "./providers/layout";
 
 function App() {
-
   return (
-    <Button>Click Me!!!</Button>
-  )
+    <LayoutProvider>
+      <Button>Click Me!!!</Button>
+    </LayoutProvider>
+  );
 }
 
-export default App
+export default App;
