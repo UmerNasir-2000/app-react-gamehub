@@ -1,7 +1,7 @@
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { apiClient } from "../lib/httpClient";
 
-class NetworkingManager {
+export default class NetworkingManager {
   
   static getAll<T>(
     endpoint: string,
@@ -36,5 +36,3 @@ class NetworkingManager {
   }
   
 }
-
-export default NetworkingManager;

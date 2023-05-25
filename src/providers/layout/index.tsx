@@ -9,17 +9,19 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = (
   return (
     <Grid
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      // gridTemplateColumns={{ base: `1fr`, lg: `250px 1fr` }}
+      templateColumns={{ base: `1fr`, lg: `250px 1fr` }}
+      paddingY={3}
+      paddingX={4}
     >
       <GridItem area='nav'>
         <Navbar />
       </GridItem>
       <Show above='lg'>
-        <GridItem area='aside'>
-            Aside
+        <GridItem area='aside' border='1px solid tomato'>
+          Aside
         </GridItem>
       </Show>
-      <GridItem area='main'>
+      <GridItem area='main' border='1px solid tomato'>
         {children}
       </GridItem>
     </Grid>
