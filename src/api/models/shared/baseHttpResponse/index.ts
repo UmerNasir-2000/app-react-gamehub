@@ -5,12 +5,12 @@ export default class BaseHttpResponse<T> {
   count: number;
   previous: string | null;
   next: string | null;
-  items: Array<T>;
+  results: Array<T>;
 
   constructor(data: BaseHttpResponse<T>) {
     this.count = data.count;
     this.previous = data.previous ?? null;
     this.next = data.next ?? null;
-    this.items = data.items;
+    this.results = data.results;
   }
 }

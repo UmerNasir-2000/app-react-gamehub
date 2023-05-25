@@ -9,8 +9,8 @@ export default class NetworkingManager {
   static getAll<T>(
     endpoint: string,
     config?: AxiosRequestConfig
-  ): Promise<AxiosResponse<T[], Error>> {
-    return apiClient.get<T[]>(endpoint, config);
+  ): Promise<AxiosResponse<T, Error>> {
+    return apiClient.get<T>(endpoint, config);
   }
 
   static get<T>(

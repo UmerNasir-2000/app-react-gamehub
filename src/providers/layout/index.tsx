@@ -9,7 +9,7 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = (
   return (
     <Grid
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      templateColumns={{ base: `1fr`, lg: `250px 1fr` }}
+      templateColumns={{ base: `1fr`, lg: `200px 1fr` }}
       paddingY={3}
       paddingX={4}
     >
@@ -17,11 +17,11 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = (
         <Navbar />
       </GridItem>
       <Show above='lg'>
-        <GridItem area='aside' border='1px solid tomato'>
+        <GridItem area='aside'>
           Aside
         </GridItem>
       </Show>
-      <GridItem area='main' border='1px solid tomato'>
+      <GridItem area='main'>
         {children}
       </GridItem>
     </Grid>

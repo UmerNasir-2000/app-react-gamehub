@@ -1,16 +1,26 @@
+import {
+  SimpleGrid,
+  Spinner
+} from "@chakra-ui/react";
 import useGames from "../../../api/hooks/useGames";
+import GameCard from "../gameCard";
 
 const GameGrid = () => {
+  const { games, isLoading, error } = useGames();
 
-  const { games, isLoading, error  } = useGames();
-
-  if (isLoading) { 
-    <div>Loading...</div>
+  if (isLoading) {
+    <Spinner />;
   }
 
-  console.log('games :>> ', games);
+  if (error) return null;
 
-  return <div>GameGrid</div>;
+  return (
+    <SimpleGrid columns={4} gap="4">
+      {games?.results.map((game) => (
+        <GameCard key={game.id} game={game} />
+      ))}
+    </SimpleGrid>
+  );
 };
 
 export default GameGrid;
