@@ -1,3 +1,6 @@
+
+// REVIEW: Thoughts about this generic implementation
+
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { apiClient } from "../lib/httpClient";
 

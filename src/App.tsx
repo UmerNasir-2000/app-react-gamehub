@@ -1,10 +1,10 @@
-import { Button } from "@chakra-ui/react";
+import GamesPage from "./pages/games";
 import LayoutProvider from "./providers/layout";
 
 function App() {
   return (
     <LayoutProvider>
-      <Button>Click Me!!!</Button>
+      <GamesPage />
     </LayoutProvider>
   );
 }

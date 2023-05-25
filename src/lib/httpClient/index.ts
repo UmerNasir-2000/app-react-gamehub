@@ -6,7 +6,7 @@ export const apiClient = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
-  params: { api: BASE_API_KEY }
+  params: { key: BASE_API_KEY }
 });
 
 
