@@ -9,7 +9,7 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = (
   return (
     <Grid
       templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
-      gridTemplateColumns={{ base: `1fr`, lg: `250px 1fr` }}
+      // gridTemplateColumns={{ base: `1fr`, lg: `250px 1fr` }}
     >
       <GridItem area='nav'>
         <Navbar />
