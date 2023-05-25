@@ -11,7 +11,7 @@ const GameGrid = () => {
   console.log('isLoading', isLoading)
 
   if (isLoading) {
-    <Spinner />;
+    return <Spinner />;
   }
 
   if (error) return null;
