@@ -8,6 +8,8 @@ import GameCard from "../gameCard";
 const GameGrid = () => {
   const { games, isLoading, error } = useGames();
 
+  console.log('isLoading', isLoading)
+
   if (isLoading) {
     <Spinner />;
   }
@@ -15,7 +17,7 @@ const GameGrid = () => {
   if (error) return null;
 
   return (
-    <SimpleGrid columns={4} gap="4">
+    <SimpleGrid columns={{ sm: 1, md: 2, lg:3, xl: 4 }} columnGap={4}>
       {games?.results.map((game) => (
         <GameCard key={game.id} game={game} />
       ))}
