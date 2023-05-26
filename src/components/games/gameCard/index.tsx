@@ -12,6 +12,9 @@ const GameCard = (props: GameCardProps) => {
       <Image src={game.background_image} alt={game.name} />
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
+        {game.parent_platforms.map((platform) => (
+          <span>{platform.platform.name}</span>
+        ))}
       </CardBody>
     </Card>
   );

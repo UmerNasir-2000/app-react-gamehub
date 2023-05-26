@@ -1,3 +1,11 @@
+// REVIEW: Class or interface for child properties for modeling data
+
+interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
+
 export default class Game {
   id: number;
   name: string;
@@ -5,6 +13,7 @@ export default class Game {
   metacritic: number;
   released: Date;
   background_image: string;
+  parent_platforms: { platform: Platform }[];
 
   constructor(data: Game) {
     this.id = data.id;
@@ -13,5 +22,6 @@ export default class Game {
     this.metacritic = data.metacritic;
     this.released = new Date(data.released);
     this.background_image = data.background_image;
+    this.parent_platforms = data.parent_platforms;
   }
 }

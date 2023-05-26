@@ -4,6 +4,7 @@
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { apiClient } from "../lib/httpClient";
 
+// REVIEW: Generic implementation
 export default class NetworkingManager {
   
   static getAll<T>(
