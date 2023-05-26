@@ -17,7 +17,7 @@ const GameGrid = () => {
   if (error) return null;
 
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2, lg:3, xl: 4 }} columnGap={4}>
+    <SimpleGrid columns={{ sm: 1, md: 2, lg:3, xl: 4 }} gap={2}>
       {games?.results.map((game) => (
         <GameCard key={game.id} game={game} />
       ))}

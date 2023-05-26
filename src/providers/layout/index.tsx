@@ -13,7 +13,7 @@ const LayoutProvider: React.FC<React.PropsWithChildren> = (
       paddingY={3}
       paddingX={4}
     >
-      <GridItem area='nav'>
+      <GridItem area='nav' mb={4}>
         <Navbar />
       </GridItem>
       <Show above='lg'>

@@ -8,7 +8,7 @@ type GameCardProps = {
 const GameCard = (props: GameCardProps) => {
   const { game } = props;
   return (
-    <Card borderRadius="md" overflow="hidden" h="fit-content">
+    <Card borderRadius="lg" overflow="hidden" h="fit-content">
       <Image src={game.background_image} alt={game.name} />
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
